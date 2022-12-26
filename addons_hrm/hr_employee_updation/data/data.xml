@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="employee_relationship" model="hr.employee.relation">
+            <field name="name">Vợ/ Chồng</field>
+    </record>
+
+    <record id="employee_relationship_father" model="hr.employee.relation">
+            <field name="name">Bố</field>
+    </record>
+
+    <record id="employee_relationship_mother" model="hr.employee.relation">
+            <field name="name">Mẹ</field>
+    </record>
+</odoo>
