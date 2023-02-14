@@ -145,11 +145,11 @@ class SCIMaintenanceRequest(models.Model):
     description = fields.Html('Mô tả', states={'new': [('readonly', False)]}, readonly=True)
     type = fields.Selection([('pc', 'PC'),
                              ('erp', 'ERP'),
-                             ('onetouch', 'One Touch'),
-                             ('informatics_equipment', 'Informatics equipment'),
-                             ('external_access', 'External access'),
+                             # ('onetouch', 'One Touch'),
+                             # ('informatics_equipment', 'Informatics equipment'),
+                             # ('external_access', 'External access'),
                              ('website', 'Website'),
-                             ('security', 'Security'),], default='oracle',
+                             ('security', 'Security'), ],
                             string='Type maintenance')
     request_date = fields.Datetime('Ngày yêu cầu', default=lambda self: fields.Datetime.now(), tracking=True,
                                    help="Date requested for the maintenance to happen")
@@ -399,7 +399,7 @@ class TypeMaintenanceRequest(models.Model):
                              # ('informatics_equipment', 'Informatics equipment'),
                              # ('external_access', 'External access'),
                              ('website', 'Website'),
-                             ('security', 'Security'), ], default='oracle',
+                             ('security', 'Security'), ],
                             string='Type maintenance')
 
 
