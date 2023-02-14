@@ -395,9 +395,9 @@ class TypeMaintenanceRequest(models.Model):
     area = fields.One2many('area.type.maintenance.request', 'type_maintenance_request', string='area')
     type = fields.Selection([('pc', 'PC'),
                              ('erp', 'ERP'),
-                             ('onetouch', 'One Touch'),
-                             ('informatics_equipment', 'Informatics equipment'),
-                             ('external_access', 'External access'),
+                             # ('onetouch', 'One Touch'),
+                             # ('informatics_equipment', 'Informatics equipment'),
+                             # ('external_access', 'External access'),
                              ('website', 'Website'),
                              ('security', 'Security'), ], default='oracle',
                             string='Type maintenance')
