@@ -149,7 +149,7 @@ class SCIMaintenanceRequest(models.Model):
                              # ('informatics_equipment', 'Informatics equipment'),
                              # ('external_access', 'External access'),
                              ('website', 'Website'),
-                             ('security', 'Security'), ],
+                             ('security', 'Security')], default='erp',
                             string='Type maintenance')
     request_date = fields.Datetime('Ngày yêu cầu', default=lambda self: fields.Datetime.now(), tracking=True,
                                    help="Date requested for the maintenance to happen")
@@ -399,7 +399,7 @@ class TypeMaintenanceRequest(models.Model):
                              # ('informatics_equipment', 'Informatics equipment'),
                              # ('external_access', 'External access'),
                              ('website', 'Website'),
-                             ('security', 'Security'), ],
+                             ('security', 'Security'), ], default='erp',
                             string='Type maintenance')
 
 
