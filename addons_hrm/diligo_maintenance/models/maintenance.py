@@ -481,8 +481,8 @@ class MailComposer(models.TransientModel):
                     'type': 'binary',  # override default_type from context, possibly meant for another model!
                 }
                 attachment_ids.append(Attachment.create(data_attach).id)
-            if values.get('attachment_ids', []) or attachment_ids:
-                values['attachment_ids'] = [self.Command.set(values.get('attachment_ids', []) + attachment_ids)]
+            # if values.get('attachment_ids', []) or attachment_ids:
+            #     values['attachment_ids'] = [self.Command.set(values.get('attachment_ids', []) + attachment_ids)]
         else:
             default_values = self.with_context(default_composition_mode=composition_mode, default_model=model,
                                                default_res_id=res_id).default_get(
